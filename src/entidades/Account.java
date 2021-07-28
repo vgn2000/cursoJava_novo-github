@@ -1,27 +1,22 @@
 package entidades;
 
 public class Account {
+	
 	private int accountNumber;
 	private String name;
 	private double deposInitial;
-	private double saldo;
+	private double balance;
 	
-	public Account(){
-		
-	}
-	
-
-
-	public Account(int accountNumber, String name, double deposInitial, double saldo) {
+	public Account(int accountNumber, String name, double deposInitial, double balance) {
 		
 		this.accountNumber = accountNumber;
 		this.name = name;
 		this.deposInitial = deposInitial;
-		this.saldo = saldo;
+		this.balance = balance;
 		
 	}
 	
-public Account(int accountNumber, String name, double deposInitial) {
+    public Account(int accountNumber, String name, double deposInitial) {
 		
 		this.accountNumber = accountNumber;
 		this.name = name;
@@ -30,14 +25,11 @@ public Account(int accountNumber, String name, double deposInitial) {
 		
 	}
 
-
-
-public Account(int accountNumber, String name) {
+  public Account(int accountNumber, String name) {
 	
 	this.accountNumber = accountNumber;
 	this.name = name;
-	
-	
+
 	
 }
 
@@ -66,25 +58,30 @@ public Account(int accountNumber, String name) {
 	}
 
 	public double getSaldo() {
-		return saldo;
+		return balance;
 	}
 
 	
 	public void depositAccount(double valor){
-		this.saldo = saldo + valor;
+		this.balance = balance + valor;
+	}
+	
+	public void deposiInitial(double valor){
+		this.balance = balance + valor;
 	}
 	
 	
 	public double updateSaldo(){
 		
-		this.saldo = + saldo;
+		this.balance = + balance;
 		
-		return saldo;
+		return balance;
 	}
+	
 	
 	public void saqueAccount(double valor){
 		double tax = 5.00;
-		this.saldo =  saldo - valor - tax;
+		this.balance =  balance - valor - tax;
 	}
 
 	

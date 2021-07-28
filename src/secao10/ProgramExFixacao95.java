@@ -25,6 +25,7 @@ public class ProgramExFixacao95 {
 			
 			System.out.println("Informe o ID: ");
 			Integer id = sc.nextInt();
+			
 			while (hasId(list, id)){
 				System.out.println("ID already taken ! Try again: ");
 				
